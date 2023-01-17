@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Bring Your Own Framework",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "100% Static HTML, No JS",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "On-Demand Components",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.",
+    icon: "mdi:directions-fork",
+  },
+];
+---
+
+<ContentSection title="servicio" id="features">
+  <Fragment slot="lead">
+    haremos su mejor servicio <span class="text-primary"
+      >incluimos planes de proyecto</span
+    >. damos el mejor sosporte
+    <span class="text-primary">nuestras paginas son como obras de arte</span>
+    herreminetas de muy buena calidad <span class="text-primary"
+      >inovacoion</span
+    >.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
+          <div class="w-16 h-16 p-3 border-2 border-current rounded-full">
+            <Icon name={icon} />
+          </div>
+          <p class="text-xl font-extrabold text-center">{title}</p>
+          <p class="text-sm text-center text-offset">{description}</p>
+          <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 items-center justify-center">
+            <a
+              href="https://astro.new/"
+              class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+            >
+              <Icon pack="mdi" name="rocket" class="h-8" />
+              <span>comprar</span>
+            </a>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

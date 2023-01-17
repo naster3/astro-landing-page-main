@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="lo mejor en servicio web" id="intro">
+  <Icon slot="eyebrow" name="Rojo" class="h-32" />
+  <Fragment slot="lead">
+    somos los reyes en diseño web
+    <span class="text-primary">modernas</span>.
+    <span class="text-primary"> de rapido despliegue</span>
+    con un elegante diseño <span class="text-primary"
+      >con todo lo eteroides</span
+    > experiencia developer.
+  </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <a
+      href="#showcase"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="telescope" class="h-8" />
+      <span> template</span>
+    </a>
+    <a
+      href="#features"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="rocket" class="h-8" />
+      <span> servicios</span>
+    </a>
+  </div>
+</ContentSection>
